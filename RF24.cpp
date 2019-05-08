@@ -9,7 +9,6 @@
 #include "nRF24L01.h"
 #include "RF24_config.h"
 #include "RF24.h"
-
 /****************************************************************************/
 
 void RF24::csn(bool mode)
@@ -608,8 +607,7 @@ bool RF24::begin(void)
 	    default: csn_pin = 0; break;
 	  }
     #endif
-	
-    _SPI.begin(csn_pin);
+    _SPI.begin(csn_pin, spi_speed);
 
 	pinMode(ce_pin,OUTPUT);
 	ce(LOW);    

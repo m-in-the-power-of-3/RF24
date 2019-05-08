@@ -58,7 +58,6 @@ void SPI::init(uint32_t speed)
 {
 	uint8_t bits = RF24_SPIDEV_BITS;
 	uint8_t mode = 0;
-
 	int ret;
 	/*
 	 * spi mode
